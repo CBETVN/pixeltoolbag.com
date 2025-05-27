@@ -5,7 +5,7 @@ body {
 .central-strip {
   width: 1366px;
   margin: 40px auto; /* centers the strip horizontally */
-  background-color: #22223b; /* your specific color */
+  background-color: #2b2b80; /* your specific color */
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.3);
