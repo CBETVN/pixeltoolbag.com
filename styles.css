@@ -27,7 +27,7 @@ h1 {
 
 .central-strip {
   width: 1000px;
-  min-height: 100vh;         /* Fill the viewport vertically */
+  min-height: 1500px;         /* Fill the viewport vertically */
   margin: 0 auto;            /* Center horizontally */
   background-color: #001965; /* Your strip color */
   border-radius: 0;          /* No rounded corners */
@@ -38,6 +38,7 @@ h1 {
   padding: 0;                /* No padding top/bottom */
 }
 .banner {
+  position: relative; /* Needed for absolute positioning inside */
   width: 100%;
   height: 160px;
   background: #5e0073; /* Solid color */
@@ -46,6 +47,35 @@ h1 {
   justify-content: center;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.50); /* <-- Drop shadow */
+}
+
+.banner-links {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  display: flex;
+  gap: 18px;
+}
+
+.banner-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.banner-links a .hash {
+  color: #c3e700; /* Green hash */
+  margin-right: 3px;
+  font-weight: bold;
+}
+
+.banner-links a:hover {
+  color: #c3e700;
 }
 
 .montserrat {
