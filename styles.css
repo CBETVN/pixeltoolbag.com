@@ -1,8 +1,26 @@
 body {
   background-color: #181818;
   color: #fff;
-  margin: 0; /* Remove default margin */
-  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-family: "Fira Code", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a,
+button,
+input,
+textarea,
+span,
+div {
+  font-family: "Fira Code", monospace !important;
 }
 
 h1 {
@@ -32,9 +50,9 @@ h1 {
 
 .central-strip h1,
 .central-strip h2 {
-  width: 846px;
-  max-width: 95vw;
-  font-size: 3rem;
+  width: 100%;
+  max-width: 846px;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
   color: #c3e700;
   margin: 48px auto 24px auto;
   font-weight: 700;
@@ -157,20 +175,46 @@ h1 {
   background: #000000;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   color: #ffffff;
   border-bottom: 2px solid #878787;
   border-top: 2px solid #878787;
+  padding-left: 16px; /* Match left padding of .prefab-bottom */
 }
 
 .prefab-bottom {
-  height: 135px; /* 360 - 190 - 35 = 135, but you want 145px, so adjust as needed */
+  height: 135px;
   background: #000000;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;   /* Change from flex-end to flex-start */
+  align-items: flex-start;       /* Already set, keeps left alignment */
   color: #fff;
   font-size: 1rem;
+  padding: 16px;
+  padding-bottom: 44px; /* Add extra space for the badge */
+  position: relative;
+}
+
+.prefab-bottom .bottom-text {
+  text-align: left;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.prefab-bottom .live-badge {
+  border: 2px solid #595959; /* Pink border */
+  color: #ff69b4;
+  padding: 4px 16px;
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  display: inline-block;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: transparent;
+  box-sizing: border-box;
+  pointer-events: none; /* Not clickable */
 }
 
 .prefab-row {
@@ -183,10 +227,13 @@ h1 {
 }
 
 .info-bg-block {
+  width: 100%;
+  max-width: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 100px;
+  margin: 24px auto;
+  padding: 8px 16px;
   box-sizing: border-box;
   border-radius: 0;
   overflow: hidden;
@@ -201,6 +248,16 @@ h1 {
   padding: 8px 16px;   /* Less vertical and horizontal padding */
   border-radius: 8px;
   margin: 0;
+}
+.info-bg-block a {
+  text-decoration: none;
+  color: #c3e700; /* Choose any color you like */
+  font-weight: 500;
+}
+
+.info-bg-block a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+  color: #c3e700;             /* Optional: different color on hover */
 }
 .bottom-banner {
   margin-top: 48px;
@@ -243,8 +300,20 @@ h1 {
 .about-bullet {
   color: #c3e700;
   font-weight: bold;
-  margin-right: 0.75em;
-  min-width: 1.5em;
+  margin-right: 0.6em;
+  min-width: 0em;
   display: inline-block;
+}
+
+.prefab-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.prefab-link:visited {
+  color: inherit;
+}
+.prefab-link .prefab-container {
+  cursor: pointer;
 }
 
