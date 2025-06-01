@@ -173,3 +173,38 @@ h1 {
   gap: 24px;
   margin-top: 32px;
 }
+
+.info-bg-block {
+  width: 846px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+  box-sizing: border-box;
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-bg-1 {
+  background-image: url('backgroundInfo01.png');
+}
+
+.info-bg-2 {
+  background-image: url('backgroundInfo02.png');
+}
+
+/* Add more .info-bg-N classes for more images */
+
+.info-bg-block p {
+  color: #fff;
+  font-size: 1.15rem;
+  text-align: center;
+  background: rgba(0,0,0,0.35); /* Optional overlay for readability */
+  padding: 24px 32px;
+  border-radius: 12px;
+  margin: 0;
+}

@@ -6,23 +6,43 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');  </style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+    .description-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Optional: add width if needed */
+}
+
+.info-bg-block {
+  width: 846px;
+  height: 460px;
+  /* ...existing styles... */
+  margin: 32px 0; /* vertical spacing, horizontal centering handled by flex */
+}
+  </style>
 </head>
 <body>
   <div class="central-strip">
     <div class="banner">
       <img src="ptb_logo.svg" alt="Pixel Toolbag Logo" class="banner-logo">
       <div class="banner-links">
-        <a href="#about"><span class="hash">#</span>about</a>
+        <a href="tools.html"><span class="hash">#</span>tools</a>
+        <a href="about.html"><span class="hash">#</span>about</a>
         <a href="#contact"><span class="hash">#</span>contact</a>
       </div>
     </div>
     <h1>Tools and scripts <br>for creative people</h1>
       <div class="description-text">
-    <!-- Your block of text goes here -->
-    <p>Creative work should be inspiring, not repetitive. If you're a graphic designer, agency, or anyone in the creative industry, you know how much time is wasted on boring, repetitive tasks that are prone to mistakes - and how those mistakes can cost time and money.
-    We build custom tools for Adobe Creative Cloud products and more, designed specifically for your job and your workflow. Whether you're streamlining your production, reducing human error, or simply saving hours every week, our plugins and scripts are here to help.</p>
+  <div class="info-bg-block info-bg-1">
+    <p>
+      Creative work should be inspiring, not repetitive. If you're a graphic designer, agency, or anyone in the creative industry, you know how much time is wasted on boring, repetitive tasks that are prone to mistakes - and how those mistakes can cost time and money.
+      We build custom tools for Adobe Creative Cloud products and more, designed specifically for your job and your workflow. Whether you're streamlining your production, reducing human error, or simply saving hours every week, our plugins and scripts are here to help.
+    </p>
   </div>
+  <!-- Add more blocks as needed -->
+</div>
   <div class="prefab-row">
     <div class="prefab-container">
       <div class="prefab-top">
