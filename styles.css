@@ -37,6 +37,14 @@ h1 {
   align-items: center;
   padding: 0;                /* No padding top/bottom */
 }
+
+.central-strip h1,
+.central-strip h2,
+.info-bg-block {
+  width: 846px;
+  max-width: 95vw;
+}
+
 .banner {
   position: relative;
   width: 100%;
@@ -170,32 +178,33 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  margin-top: 32px;
+  gap: 32px;
+  margin: 0 auto 48px auto;
+  max-width: 1000px; /* or your .central-strip width */
 }
 
 .info-bg-block {
-  width: 846px;
-  height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 32px auto;
+  margin: 24px auto;
   box-sizing: border-box;
-  border-radius: 18px;
+  border-radius: 0;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #181818;
+  border: 3px dashed #434343;
+  /* padding: 12px 32px;   Less vertical, more horizontal padding */
+  width: auto;          /* Let the block fit its content */
+  max-width: 95vw;      /* Responsive on small screens */
 }
 
-.info-bg-1 {
+/* .info-bg-1 {
   background-image: url('backgroundInfo01.png');
 }
 
 .info-bg-2 {
   background-image: url('backgroundInfo02.png');
-}
+} */
 
 /* Add more .info-bg-N classes for more images */
 
@@ -203,8 +212,17 @@ h1 {
   color: #fff;
   font-size: 1.15rem;
   text-align: center;
-  background: rgba(0,0,0,0.35); /* Optional overlay for readability */
+  /* background: rgba(0,0,0,0.35); Optional overlay for readability */
   padding: 24px 32px;
   border-radius: 12px;
   margin: 0;
+}
+
+.pixel-frame {
+  background: #222;
+  width: 200px;
+  height: 200px;
+  outline: 6px solid #c3e700;
+  outline-offset: 0px;
+  box-sizing: border-box;
 }
