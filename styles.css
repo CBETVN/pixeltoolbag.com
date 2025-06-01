@@ -317,3 +317,27 @@ h1 {
   cursor: pointer;
 }
 
+/* Live badge and container */
+.prefab-container.live,
+.live-badge.live {
+  border-color: #595959;
+  color: #ff69b4;
+}
+.live-badge.live {
+  border: 2px solid #ff69b4;
+  color: #ff69b4;
+  background: transparent;
+}
+
+/* Dev badge and container */
+.prefab-container.dev,
+.live-badge.dev {
+  border-color: #595959;
+  color: #909090;
+}
+.live-badge.dev {
+  border: 2px solid #909090;
+  color: #909090;
+  background: transparent;
+}
+
